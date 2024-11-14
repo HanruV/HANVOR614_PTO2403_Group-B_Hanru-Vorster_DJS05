@@ -22,3 +22,4 @@ export const counterReducer = function (state = initialState, action) {
 console.log(counterReducer(initialState, { type: ADD }));
 console.log(counterReducer({ count: 2 }, { type: SUBTRACT }));
 console.log(counterReducer({ count: 1 }, { type: RESET }));
+console.log(counterReducer(initialState, { type: ADD }));
