@@ -1,4 +1,4 @@
-import { addAction, subtractAction, resetAction } from "./actions.js";
+import { ADD, SUBTRACT, RESET } from "./actions.js";
 import { initialState } from "./state.js";
 
 export const counterReducer = function (state = initialState, action) {
@@ -10,7 +10,7 @@ export const counterReducer = function (state = initialState, action) {
     case SUBTRACT:
       return { ...state, count: state.count - 1 };
 
-    case RESER:
+    case RESET:
       return { ...state, count: (state.count = 0) };
 
     default:
@@ -19,6 +19,6 @@ export const counterReducer = function (state = initialState, action) {
 };
 
 // testing
-console.log(counterReducer(initialState, { ADD }));
-console.log(counterReducer({ count: 2 }, { SUBTRACT }));
-console.log(counterReducer({ count: 1 }, { RESER }));
+console.log(counterReducer(initialState, { type: ADD }));
+console.log(counterReducer({ count: 2 }, { type: SUBTRACT }));
+console.log(counterReducer({ count: 1 }, { type: RESET }));
