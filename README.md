@@ -38,10 +38,10 @@
 
 ## Challenges faced and how I overcame them
 
-| Challenge | Solution |
-| --------- | -------- |
-|           |          |
-|           |          |
-|           |          |
-|           |          |
-|           |          |
+| Challenge                                        | Solution |
+| ------------------------------------------------ | -------- |
+| reducer not working (not invoking the functions) |          |
+|                                                  |          |
+|                                                  |          |
+|                                                  |          |
+|                                                  |          |

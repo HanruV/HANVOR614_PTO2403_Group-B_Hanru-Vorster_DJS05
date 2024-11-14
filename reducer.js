@@ -17,3 +17,8 @@ export const counterReducer = function (state = initialState, action) {
       return state;
   }
 };
+
+// testing
+console.log(counterReducer(initialState, { addAction }));
+console.log(counterReducer({ count: 2 }, { subtractAction }));
+console.log(counterReducer({ count: 1 }, { resetAction }));
