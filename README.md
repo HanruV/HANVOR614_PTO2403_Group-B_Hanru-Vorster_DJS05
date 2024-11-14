@@ -21,6 +21,20 @@
     - getState() - to get the current state
     - dispatch(action) - update the state by giving an action to the reducer
     - subscribe(listener) - registers listeners that are called whenever a state change happens
+- scripts.js
+  - handles the initial setup by importing:
+    - store, actions, and state management functions
+    - dispatching actions (ADD, SUBTRACT, RESET)
+    - logging the state using getState() to verify the changes after each action is dispatched
+
+### How it works
+
+1. Initialise state
+   - initial state logs { count: 0 }
+2. Dispatching actions
+   - ADD, SUBTRACT, RESET
+3. State updates
+4. logging to the console
 
 ## Challenges faced and how I overcame them
 
