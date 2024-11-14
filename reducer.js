@@ -4,13 +4,13 @@ import { initialState } from "./state.js";
 export const counterReducer = function (state = initialState, action) {
   switch (action.type) {
     // checks the add addAction and executes this code in return
-    case addAction:
+    case ADD:
       return { ...state, count: state.count + 1 };
 
-    case subtractAction:
+    case SUBTRACT:
       return { ...state, count: state.count - 1 };
 
-    case resetAction:
+    case RESER:
       return { ...state, count: (state.count = 0) };
 
     default:
@@ -19,6 +19,6 @@ export const counterReducer = function (state = initialState, action) {
 };
 
 // testing
-console.log(counterReducer(initialState, { addAction }));
-console.log(counterReducer({ count: 2 }, { subtractAction }));
-console.log(counterReducer({ count: 1 }, { resetAction }));
+console.log(counterReducer(initialState, { ADD }));
+console.log(counterReducer({ count: 2 }, { SUBTRACT }));
+console.log(counterReducer({ count: 1 }, { RESER }));
