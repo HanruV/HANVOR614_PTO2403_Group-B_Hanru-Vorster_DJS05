@@ -38,10 +38,10 @@
 
 ## Challenges faced and how I overcame them
 
-| Challenge                                        | Solution |
-| ------------------------------------------------ | -------- |
-| reducer not working (not invoking the functions) |          |
-|                                                  |          |
-|                                                  |          |
-|                                                  |          |
-|                                                  |          |
+| Challenge                                        | Solution                                                                       |
+| ------------------------------------------------ | ------------------------------------------------------------------------------ |
+| reducer not working (not invoking the functions) | had to define all my actions as constants, to use them in the reducer function |
+|                                                  |                                                                                |
+|                                                  |                                                                                |
+|                                                  |                                                                                |
+|                                                  |                                                                                |
