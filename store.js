@@ -1,22 +1,39 @@
 import { counterReducer } from "./reducer.js";
 
+/**
+ *
+ * @param {Function} reducer - the reducer function that manages the state changes
+ * @returns {Object} - an object with methods to access the state, subscribe, and dispatch actions
+ */
 function createStore(reducer) {
-  // initialise the state and an array to hold listens for changes
+  /**
+   * gets the current state
+   * @returns {*} - the current state
+   */
   let state;
   const listeners = [];
 
   const getState = () => state;
 
-  // function to subscribe a listener (callback) to be called when the state changes
+  /**
+   * subscribes a listener to be called when the state changes
+   *
+   * @param {Function} listener - callback that happens when state changes
+   * @returns {Function} - a function to unsubscribe listeners
+   */
   const subscribe = (listener) => {
     listeners.push(listener);
-    // return a function to unsubscribe (remove) the listener
     return () => {
       const index = listeners.indexOf(listener);
       listeners.splice(index, 1);
     };
   };
-  // function to dispatch an action to change the state using the reducer
+
+  /**
+   * dispatches an action to update the state using the reducer
+   *
+   * @param {Object} action - the action to be dispatched
+   */
   const dispatch = (action) => {
     state = reducer(state, action);
     listeners.forEach((listener) => listener());
@@ -29,7 +46,10 @@ function createStore(reducer) {
   return { getState, subscribe, dispatch };
 }
 
-// create a store using the `counterReducer` to handle the state
+/**
+ * store instance using the 'counterReducer' to manage state
+ * @type {Object}
+ */
 export const store = createStore(counterReducer);
 
 // test the store
