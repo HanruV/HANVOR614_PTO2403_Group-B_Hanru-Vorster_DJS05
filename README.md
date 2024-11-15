@@ -45,3 +45,5 @@
 | Challenge                                        | Solution                                                                       |
 | ------------------------------------------------ | ------------------------------------------------------------------------------ |
 | reducer not working (not invoking the functions) | had to define all my actions as constants, to use them in the reducer function |
+| implementation of the subscribe events           | used GPT to explain to me how to track changes and store them in an array      |
+| dispatching an initial state                     | used GPT to explain to me how this is implemented in the store                 |
