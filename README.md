@@ -2,9 +2,13 @@
 
 ## How to run the code:
 
-## A brief overview of the approach
+- in the script.js you can call any dispatch on the store to change the state:
+  - store.dispatch({ type: ADD });
+  - store.dispatch({ type: ADD });
+  - store.dispatch({ type: SUBTRACT });
+  - store.dispatch({ type: RESET });
 
-### Structure
+## A brief overview of the approach
 
 - state.js
   - holds the initial state of the app in an object ex: { count: 0 }.
@@ -41,7 +45,3 @@
 | Challenge                                        | Solution                                                                       |
 | ------------------------------------------------ | ------------------------------------------------------------------------------ |
 | reducer not working (not invoking the functions) | had to define all my actions as constants, to use them in the reducer function |
-|                                                  |                                                                                |
-|                                                  |                                                                                |
-|                                                  |                                                                                |
-|                                                  |                                                                                |
